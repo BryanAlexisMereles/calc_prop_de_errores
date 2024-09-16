@@ -34,6 +34,6 @@ Puedes probar la calculadora en el siguiente enlace:
 Si encuentras útil esta calculadora y deseas apoyar el proyecto, puedes hacerlo mediante una donación. Tu apoyo es muy apreciado y ayuda a mantener y mejorar el proyecto.
 
 Puedes hacer una donación a través de Mercado Pago en el siguiente enlace:
-[Haz una donación](https:link.mercadopago.com.ar/bryanmereles)
+[Haz una donación](https://link.mercadopago.com.ar/bryanmereles)
 
 ¡Gracias por tu apoyo!
