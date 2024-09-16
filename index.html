@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagación de errores</title>
+    <script src="https://unpkg.com/mathjs@13.1.1/lib/browser/math.js"></script>
+    <script defer src="//unpkg.com/mathlive"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Propagación de Errores</h1>
+        </header>
+
+        <b>Uso</b>
+        <p>Escribe la función a la que deseas aplicar la propagación de errores en el primer recuadro, luego las variables de tu función en el segundo recuadro, separadas por punto y coma <span class="resaltado">( ; )</span></p>
+
+
+        <div class="calcs">
+            <h3>Función</h3>
+            <math-field id="funcion" virtual-keyboard-mode="manual"></math-field>
+       
+            <p class="nota"><b class="resaltado">Nota:</b> si hay una multiplicación entre dos variables, dejar explicito presionando la tecla asterisco (*) o la combinación de teclas equivalente. De lo contrario no se reconoce correctamente la función.</p>
+        
+            <form class="varSubmit" onsubmit="event.preventDefault(); calcularDerivada();">
+                <input type="text" id="var" placeholder="Variables separadas por punto y coma ;">
+                <button type="submit">Calcular</button>
+            </form>
+
+            <div class="containerResultado"><math-field id="resultado" read-only></math-field>
+
+                <button class="boton-copiar" onclick="copiarResultado()">Copiar</button></div>
+        </div>
+        <button class="toggle-atajos" onclick="toggleAtajos()">Algunos atajos de teclado ↴</button>
+        <ul class="atajos-lista">
+            <li><span class="resaltado">^^</span> insertar un exponente.</li>
+            <li><span class="resaltado">/</span> divisiones.</li>
+            <li><span class="resaltado">*</span> multiplicación.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Para reportar bugs o contribuir, visita 
+            <a href="https://github.com/bryanalexismereles" target="_blank" class="footer-link">GitHub</a> 
+            o envíame un correo a 
+            <a href="mailto:bryanmereles@gmail.com" class="footer-link">bryanmereles@gmail.com</a>.
+        </p>
+    </footer>
+    
+    <script src="index.js"></script>
+</body>
+</html>
