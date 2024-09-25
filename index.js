@@ -16,11 +16,13 @@ function calcularDerivada() {
     // entonces derivo, evaluo en el punto, y luego multiplico por su error
     let scope = {};
 
-    arrayVariables.forEach((variable, index) => {
-      let sepEqual = variable.split("=");
-      let sepValorError = sepEqual[1].split("/");
-      scope[sepEqual[0]] = parseFloat(sepValorError[0]);
-    });
+    if (inputVar.includes("=")) {
+      arrayVariables.forEach((variable, index) => {
+        let sepEqual = variable.split("=");
+        let sepValorError = sepEqual[1].split("/");
+        scope[sepEqual[0]] = parseFloat(sepValorError[0]);
+      });
+    }
 
     arrayVariables.forEach((variable, index) => {
       if (inputVar.includes("=")) {
