@@ -14,15 +14,18 @@ function calcularDerivada() {
     // Al recorrer las variables me fijo si incluye el =, entonces hago una separacion de todo lo que necesito
     // por ejemplo: x=3/0.02  siendo x la variable, 3 el valor de x y 0.02 el error asociado a la medicion
     // entonces derivo, evaluo en el punto, y luego multiplico por su error
+    let scope = {};
+
+    arrayVariables.forEach((variable, index) => {
+      let sepEqual = variable.split("=");
+      let sepValorError = sepEqual[1].split("/");
+      scope[sepEqual[0]] = parseFloat(sepValorError[0]);
+    });
 
     arrayVariables.forEach((variable, index) => {
       if (inputVar.includes("=")) {
         let sepEqual = variable.split("=");
         let sepValorError = sepEqual[1].split("/");
-
-        let scope = {
-          [sepEqual[0]]: parseFloat(sepValorError[0]),
-        };
 
         resultadoNumerico +=
           math.abs(
@@ -58,6 +61,7 @@ function calcularDerivada() {
   } catch (error) {
     const resultadoField = document.getElementById("resultado");
     resultadoField.setValue("Error \\ en \\ la \\ función");
+    console.log(error);
   }
 }
 
