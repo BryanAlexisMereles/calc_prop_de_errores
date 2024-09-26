@@ -15,15 +15,15 @@
         </header>
 
         <b>Uso</b>
-        <p>Escribe la función a la que deseas aplicar la propagación de errores en el primer recuadro, luego las variables de tu función en el segundo recuadro, separadas por punto y coma <span class="resaltado">( ; )</span></p>
+        <p>Escribe la función a la que deseas aplicar la propagación de errores en el primer recuadro, luego las variables de tu función en el segundo recuadro, separadas por punto y coma <span class="resaltado">( ; )</span> y presiona el botón "calcular"</p>
         <span>Ej: Primer recuadro, función [<b>x²+y³+z+c</b>] - Segundo recuadro, variables [<b>x;y;z</b>]</span>
-        <p>Para <i class="resaltado">obtener valores numéricos</i>, ingresa tus variables con el siguiente formato: <b class="resaltado">variable=valor/error_medido</b>.</p>
-        <span> Ej: x=2.3/0.1</span>
+        <p>Para <i class="resaltado">obtener valores numéricos</i>, ingresa tus variables con el siguiente formato: <b class="resaltado">variable=valor/error</b>.</p>
+        <span> Ej: x=2.3/0.1 ; y=5.21/0.02</span>
 
 
         <div class="calcs">
             <h3>Función</h3>
-            <math-field id="funcion" virtual-keyboard-mode="manual"></math-field>
+            <math-field id="funcion" virtual-keyboard-mode="manual" ></math-field>
        
             <p class="nota"><b class="resaltado">Nota:</b> si hay una multiplicación entre dos variables, dejar explicito presionando la tecla asterisco (*) o la combinación de teclas equivalente. De lo contrario no se reconoce correctamente la función.</p>
         
@@ -32,7 +32,7 @@
                 <button type="submit">Calcular</button>
             </form>
 
-            <div class="containerResultado"><math-field id="resultado" read-only></math-field>
+            <div class="containerResultado"><math-field id="resultado" read-only>Ecuación\ utilizada: \ \ \sigma_f = \left|\frac{\partial f}{\partial x_1}\right| \sigma_{x_1} + \left|\frac{\partial f}{\partial x_2}\right| \sigma_{x_2} + \cdots + \left|\frac{\partial f}{\partial x_n}\right| \sigma_{x_n}</math-field>
 
                 <button class="boton-copiar" onclick="copiarResultado()">Copiar</button></div>
         </div>

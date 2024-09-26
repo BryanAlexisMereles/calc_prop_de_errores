@@ -50,6 +50,9 @@ math-field {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {

@@ -2,6 +2,10 @@
 
 Esta calculadora web permite realizar cálculos de propagación de errores para funciones matemáticas utilizando mediciones y errores asociados. Además, puede generar derivadas parciales respecto a cada variable de una función dada y devolver la expresión completa derivada de propagación de errores.
 
+La ecuación aplicada para el cálculo es la siguiente:
+
+![Equation](ecuacion_prop_errores.png)
+
 ## Prueba la Calculadora
 
 Puedes probar la calculadora en el siguiente enlace:
